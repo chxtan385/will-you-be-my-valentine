@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Valentine? 💖</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 3em;
+      color: #fff;
+    }
+    button {
+      font-size: 1.5em;
+      padding: 15px 30px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+    .no {
+      background-color: #fff;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 Will You Be My Valentine? 💖</h1>
+
+  <button class="yes" onclick="yesClicked()">YES 😍</button>
+  <button class="no" onclick="noClicked()">NO 🙈</button>
+
+  <script>
+    function yesClicked() {
+      document.body.innerHTML =
+        "<h1>🎉 YAYYYY! I’m so happy 💕</h1><p>Best Valentine ever 😘</p>";
+    }
+    function noClicked() {
+      alert("Error 404: NO not allowed 😌 Try again!");
+    }
+  </script>
+
+</body>
+</html>
