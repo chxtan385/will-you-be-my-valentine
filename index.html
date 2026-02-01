@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Will You Be My Valentine? 💖</title>
+  <title>Valentine Proposal 💖</title>
   <style>
     body {
       background: linear-gradient(135deg, #ff9a9e, #fad0c4);
       font-family: Arial, sans-serif;
       text-align: center;
       padding-top: 100px;
+      overflow: hidden;
     }
     h1 {
       font-size: 3em;
@@ -17,35 +18,44 @@
     button {
       font-size: 1.5em;
       padding: 15px 30px;
-      margin: 20px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
+      position: relative;
     }
-    .yes {
+    #yes {
       background-color: #ff4d6d;
       color: white;
     }
-    .no {
-      background-color: #fff;
+    #no {
+      background-color: white;
       color: #333;
+      position: absolute;
     }
   </style>
 </head>
 <body>
 
-  <h1>💖 Will You Be My Valentine? 💖</h1>
+  <h1>💖 Will You Be My Valentine, <span id="name">Jaineey</span>? 💖</h1>
 
-  <button class="yes" onclick="yesClicked()">YES 😍</button>
-  <button class="no" onclick="noClicked()">NO 🙈</button>
+  <button id="yes" onclick="yesClicked()">YES 😍</button>
+  <button id="no" onmouseover="moveNo()">NO 🙈</button>
 
   <script>
     function yesClicked() {
-      document.body.innerHTML =
-        "<h1>🎉 YAYYYY! I’m so happy 💕</h1><p>Best Valentine ever 😘</p>";
+      document.body.innerHTML = `
+        <h1>🎉 YAYYYY Jaineey!!! 💕</h1>
+        <p style="font-size:2em;">Best Valentine ever 😘</p>
+        <p>I’m so lucky ❤️</p>
+      `;
     }
-    function noClicked() {
-      alert("Error 404: NO not allowed 😌 Try again!");
+
+    function moveNo() {
+      const noBtn = document.getElementById("no");
+      const x = Math.random() * (window.innerWidth - 150);
+      const y = Math.random() * (window.innerHeight - 150);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
     }
   </script>
 
